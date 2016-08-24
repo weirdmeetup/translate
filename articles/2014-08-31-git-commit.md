@@ -450,18 +450,34 @@ The future maintainer that thanks you may be yourself!
 ## Tips
 
 ### Learn to love the command line. Leave the IDE behind.
+### 커맨드 라인을 애용하고 IDE를 멀리하세요.
 
 For as many reasons as there are git subcommands, it's wise to embrace the command line. Git is insanely powerful; IDEs are too, but each in different ways. I use an IDE every day (IntelliJ IDEA) and have used others extensively (Eclipse), but I have never seen IDE integration for git that could begin to match the ease and power of the command line (once you know it).
+Git 서브커맨드가 여러가지 있는 만큼 커맨드 라인을 애용하는 것이 현명합니다.
+Git은 미친듯 강력합니다.
+IDE들 또한 마찬가지고요, 하지만 둘은 다른 길을 걷습니다.
+저는 IDE를 매일 씁니다.(IntelliJ IDEA)
+그리고 다른 것도 광범위하게 씁니다.(Eclipse)
+하지만 저는 IDE의 Git 지원 기능 중 커맨드라인만큼 쉽고 강력한 것을 보지 못했습니다.
+(여러분도 알고 있을겁니다.)
 
 Certain git-related IDE functions are invaluable, like calling `git rm` when you delete a file, and doing the right stuff with `git` when you rename one. Where everything falls apart is when you start trying to commit, merge, rebase, or do sophisticated history analysis through the IDE.
+어떤 Git 연관의 IDE 기능들은 매우 가치있습니다. 파일을 지울 때 `git rm`을 해주거나 파일명을 바꿀 때 `git`으로 연계해주는 것들이요.
+모든 것이 멀리 떨어지는 부분은 커밋, 머지, 리베이스나 수준 높은 기록 분석을 IDE로 시도할 때 입니다.
 
 When it comes to wielding the full power of git, it's command-line all the way.
+Git의 전력을 발휘하는 것은 바로 커맨드 라인을 쓸 때입니다.
 
 Remember that whether you use Bash or Z shell, there are [tab completion scripts](http://git-scm.com/book/en/Git-Basics-Tips-and-Tricks) that take much of the pain out of remembering the subcommands and switches.
+여러분이 Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 스위치 할때의 고통을 줄여주니 기억해두세요.
 
 ### Read Pro Git
+### Pro Git 읽기
 
 The [Pro Git](http://git-scm.com/book) book is available online for free, and it's fantastic. Take advantage!
+Pro Git은 온라인 상에서 무료로 읽어볼 수 있고 내용도 환상적입니다.
+이용하세요!
+
 
 
 [1]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
