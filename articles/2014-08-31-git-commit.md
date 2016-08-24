@@ -370,12 +370,21 @@ Notice how this doesn't work for the other non-imperative forms:
 
 <a name="wrap-72"></a>
 ### 6. Wrap the body at 72 characters
+### 6. 본문을 72자 단위로 개행한다
 
 Git never wraps text automatically. When you write the body of a commit message, you must mind its right margin, and wrap text manually.
+Git은 text를 절대 자동으로 개행하지 않습니다.
+커밋 메시지의 본문을 적을 때엔 본문의 우측 여백을 신경쓰며 작성해야하고, 본문을 정해진대로 개행해야 합니다.
 
 The recommendation is to do this at 72 characters, so that git has plenty of room to indent text while still keeping everything under 80 characters overall.
+72자 기준으로 개행하는 것을 추천드립니다. 그렇게 하면 전체 80자의 공간 중 Git이 들여쓰기 문자를 위해 여유 문자를 가질 수 있습니다.
 
 A good text editor can help here. It's easy to configure Vim, for example, to wrap text at 72 characters when you're writing a git commit. Traditionally, however, IDEs have been terrible at providing smart support for text wrapping in commit messages (although in recent versions, IntelliJ IDEA has [finally](http://youtrack.jetbrains.com/issue/IDEA-53615) [gotten](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [better](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) about this).
+좋은 텍스트 에디터는 이것을 도와줍니다.
+예를 들어, Vim에서는 설정하기 쉽습니다.
+전통적으로 Vim에서 Git 커밋 메시지를 작성하면 72자 단위로 개행시켜줍니다.
+하지만 IDE들은 커밋 메시지에서의 개행에 대한 지원이 끔찍합니다.
+(최근 버전의 IntelliJ IDEA는 [마침내](http://youtrack.jetbrains.com/issue/IDEA-53615) [좀](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [쓸만해졌지만](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) 말이죠.)
 
 
 <a name="why-not-how"></a>
