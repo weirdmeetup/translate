@@ -306,7 +306,11 @@ So shoot for 50 characters, but consider 69 the hard limit.
 <a name="capitalize"></a>
 ### 3. Capitalize the subject line
 
+### 3. 제목 행 첫 글자는 대문자로 쓰기
+
 This is as simple as it sounds. Begin all subject lines with a capital letter.
+
+이 규칙은 말 그대로 간단하다. 제목 행의 모든 단어는 대문자로 시작한다.
 
 For example:
 
@@ -315,6 +319,15 @@ For example:
 Instead of:
 
  - <font color="red">accelerate to 88 miles per hour</font>
+
+이렇게 작성하는 것 보다는,
+
+ - <font color="red">accelerate to 88 miles per hour</font>
+
+다음처럼 작성하자.
+
+ - <font color="green">Accelerate to 88 miles per hour</font>
+
 
 <a name="end"></a>
 ### 4. Do not end the subject line with a period
