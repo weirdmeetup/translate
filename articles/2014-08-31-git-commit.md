@@ -332,7 +332,11 @@ Instead of:
 <a name="end"></a>
 ### 4. Do not end the subject line with a period
 
+### 4. 제목 행 끝에 마침표 넣지 않기
+
 Trailing punctuation is unnecessary in subject lines. Besides, space is precious when you're trying to keep them to [50 chars or less](#limit-50).
+
+제목 행 끝에는 구두점이 필요 없다. 게다가 [50자 미만](#limit-50) 규칙을 따르기 위해서는 이런 사소한 공간도 소중하다.
 
 Example:
 
@@ -342,6 +346,14 @@ Instead of:
 
  - <font color="red">Open the pod bay doors.</font>
 
+
+이렇게 작성하는 것 보다는,
+
+ - <font color="red">Open the pod bay doors.</font>
+
+다음과 같이 작성한다.
+
+ - <font color="green">Open the pod bay doors</font>
 
 <a name="imperative"></a>
 ### 5. Use the imperative mood in the subject line
