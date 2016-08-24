@@ -389,8 +389,10 @@ A good text editor can help here. It's easy to configure Vim, for example, to wr
 
 <a name="why-not-how"></a>
 ### 7. Use the body to explain what and why vs. how
+### 7. 본문에 어떻게 바꿨는지 보단 무엇을 왜 바꿨는지 설명한다
 
 This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) is a great example of explaining what changed and why:
+이 [Bitcoin Core의 커밋](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)은 무엇이 바뀌었고 왜 바꿨는지 설명하는 멋진 예시입니다.
 
     commit eb0b56b19017ab5c16c745e6da39c53126924ed6
     Author: Pieter Wuille <pieter.wuille@gmail.com>
@@ -414,11 +416,34 @@ This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56
        fail(), clear(n) and exceptions() are just never called. Delete
        them.
 
-Take a look at the [full diff](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) and just think how much time the author is saving fellow and future committers by taking the time to provide this context here and now. If he didn't, it would probably be lost forever.
+    commit eb0b56b19017ab5c16c745e6da39c53126924ed6
+    Author: Pieter Wuille <pieter.wuille@gmail.com>
+    Date:   Fri Aug 1 22:57:55 2014 +0200
+
+       serialize.h의 예외 처리를 간략화한다
+
+       serialize.h의 stream 구현과 관련된 메소드에서 'state'와 'exceptmask'를
+       삭제합니다.
+
+       exceptmask는 언제나 'failbit'을 포함하고, setstate는 언제나 bits = failbit
+       과 함께 호출되며 이 모든 것은 즉각적으로 예외를 발생시킵니다. 이 변수들을 삭제하고
+       setstate가 즉각적으로 예외를 발생시키게 바꿉니다. (물론 몇몇 죽은 코드도 지웁니다)
+
+       그 결과 good()은 실패 후 절대 도달할 수 없고 (딱 두 군데서 호출 되는데 한 곳은
+       테스트 안임) 이것은 단순히 !eof()로 대체할 수 있습니다.
+
+       fail(), clear(n),exceptions()은 전혀 호출되지 않습니다. 삭제합니다.
+
+Take a look at the [full diff](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) and just think how much time the author is saving fellow and future committers by taking the time to provide this context here and now.
+If he didn't, it would probably be lost forever.
+[전체 변경사항](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)을 보고 작성자가 이 내용을 제공하는 데에 시간을 씀으로써 동료, 그리고 앞으로의 커미터들의 시간을 얼마나 절약시켰을지 상상해보세요.
+만약 그가 이 메시지를 남기지 않았다면 이것은 영원히 묻혔을 것입니다.
 
 In most cases, you can leave out details about how a change has been made. Code is generally self-explanatory in this regard (and if the code is so complex that it needs to be explained in prose, that's what source comments are for). Just focus on making clear the reasons why you made the change in the first place—the way things worked before the change (and what was wrong with that), the way they work now, and why you decided to solve it the way you did.
+대부분의 경우, 여러분은 만든 것이 어떻게 바뀌었는지를 남길 것입니다. 이 관점에서 보면 코드는 보통 따로 설명이 필요 없습니다. (그리고 만약 코드가 너무 복잡하다면 산문으로 설명되어야할 필요가 있지만 그런 것을 적기 위해 소스의 주석을 적을 수 있죠.) 여러분이 왜 이렇게 바꾸었는지에 먼저 주목하세요. 바꾸기 전에 무엇을 했는지 (그리고 무엇이 잘못 동작했는지), 지금은 어떻게 동작하는지, 그리고 왜 당신이 그렇게 바꾸기로 했는지 적으세요.
 
 The future maintainer that thanks you may be yourself!
+미래의 메인테이너가 감사할겁니다. 물론 자기 자신도요!
 
 
 <a name="tips"></a>
