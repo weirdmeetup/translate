@@ -276,19 +276,31 @@ There are a number of other contexts in git where the distinction between subjec
 <a name="limit-50"></a>
 ### 2. Limit the subject line to 50 characters
 
+### 2. 제목 행을 50자로 제한하기
+
 50 characters is not a hard limit, just a rule of thumb. Keeping subject lines at this length ensures that they are readable, and forces the author to think for a moment about the most concise way to explain what's going on.
+
+제목 행을 50자로 작성하는 것은 강제로 제한하는 것이 아니라 단지 경험에 의한 규칙에 해당한다. 제목 행을 이 길이에 맞춰 작성하면 읽기 편할 뿐더러 작성자로 하여금 무슨 일이 일어나는지 간결하게 작성하는데 집중할 수 있도록 돕게 된다.
 
 > _Tip: If you're having a hard time summarizing, you might be committing too many changes at once. Strive for [_atomic commits_](http://www.freshconsulting.com/atomic-commits/) (a topic for a separate post)._
 
+> _팁: 제목을 요약하는 것이 너무 어렵다면 아마도 한 번에 커밋하기에 너무 많은 변경을 포함하는 경우인지도 모른다. [_원자적 커밋_](http://www.freshconsulting.com/atomic-comits/)을 하도록 노력하자. (별도의 포스트 주제다.)_
+
 GitHub's UI is fully aware of these conventions. It will warn you if you go past the 50 character limit:
+
+Github의 UI는 이런 관례를 잘 알고 있다. 만약 50자 이상을 입력하려고 한다면 경고 표시가 나타난다.
 
 ![gh1](http://i.imgur.com/zyBU2l6.png)
 
 And will truncate any subject line longer than 69 characters with an ellipsis:
 
+그리고 69자 이상의 제목 행이라면 다음처럼 줄임 표시가 나타난다.
+
 ![gh2](http://i.imgur.com/27n9O8y.png)
 
 So shoot for 50 characters, but consider 69 the hard limit.
+
+그러므로 50자를 기준으로 적되, 최대 상한선은 69자임을 염두하자.
 
 
 <a name="capitalize"></a>
