@@ -150,31 +150,61 @@ For example:
 <a name="separate"></a>
 ### 1. Separate subject from body with a blank line
 
+### 1. 제목과 본문을 빈 행으로 분리하기
+
 From the `git commit` [manpage](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html#_discussion):
+
+`git commit`의 [man 도움말 페이지](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html#_discussion)의 내용이다.
 
 > Though not required, it's a good idea to begin the commit message with a single short (less than 50 character) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, git-format-patch(1) turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body.
 
+> 필수는 아니지만 커밋 메시지를 작성하는 경우에 변경 사항을 (50자 이내로)요약하고 빈 행을 추가한 다음, 더 자세한 설명을 적은 것은 좋은 방식이라 할 수 있다. 구분을 위한 빈 행을 추가하면 짧은 요약을 커밋 제목과 같이 처리하게 되고 그 제목은 Git에서 두루두루 활용할 수 있다. 예를 들어 git-format-patch(1)을 사용했을 때, 커밋은 메일의 형태로 변경하게 되는데 첫 행을 제목으로 사용하게 되고 나머지 커밋 내용을 본문으로 사용하는 것을 볼 수 있다.
+
 Firstly, not every commit requires both a subject and a body. Sometimes a single line is fine, especially when the change is so simple that no further context is necessary. For example:
+
+먼저, 모든 커밋이 제목과 본문으로 이뤄져야 하는 것은 아니다. 한 줄만 작성해도 괜찮은 경우도 많다. 너무나도 사소한 변경이라서 맥락에 대한 자세한 설명이 필요 없을 정도로 간단하면 말이다. 다음과 같은 경우다.
 
     Fix typo in introduction to user guide
 
+    사용자 가이드 서문의 오타를 수정함
+
 Nothing more need be said; if the reader wonders what the typo was, she can simply take a look at the change itself, i.e. use `git show` or `git diff` or `git log -p`.
+
+더 설명할 필요가 없다. 만약 이 커밋을 읽은 사람이 어떤 오타인지 궁금하다면 간단하게 어떤 내용을 변경한 커밋인지 살펴보면 된다. `git show`, `git diff`, 또는 `git log -p`와 같은 명령을 사용해서 말이다.
 
 If you're committing something like this at the command line, it's easy to use the `-m` switch to `git commit`:
 
+이런 내용의 커밋 메시지를 명령행에서 작성한다면 `git commit`의 `-m` 스위치로 쉽게 작성할 수 있다.
+
     $ git commit -m"Fix typo in introduction to user guide"
+
+    $ git commit -m"사용자 가이드 서문의 오타를 수정함"
 
 However, when a commit merits a bit of explanation and context, you need to write a body. For example:
 
+하지만 어떤 변경 사항인지 맥락과 설명이 필요하다면 본문을 작성해야 한다. 다음 예를 보자.
+
     Derezz the master control program
+
+    마스터 컨트롤 프로그램 삭제
 
     MCP turned out to be evil and had become intent on world domination.
     This commit throws Tron's disc into MCP (causing its deresolution)
     and turns it back into a chess game.
 
+    마스터 컨트롤 프로그램(MCP)이 사악하게 변해서 세계를 통제하려고 함.
+    이 커밋은 트론의 디스크를 MCP에 (삭제를 위해) 던져 넣어 MCP는 다시 체스
+    게임으로 돌아감.
+
+    (주: 영화 트론 줄거리)
+
 This is not so easy to commit this with the `-m` switch. You really need a proper editor. If you do not already have an editor set up for use with git at the command line, read [this section of Pro Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
+이런 커밋은 `-m` 스위치를 사용해서 입력하기 어렵다. 이런 내용을 입력하기 위해서는 적합한 편집기를 사용해야 한다. 명령행 git에서 사용하는 편집기를 아직 설정하지 않았다면 [프로 Git의 내용](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)을 읽어보도록 한다.
+
 In any case, the separation of subject from body pays off when browsing the log. Here's the full log entry:
+
+제목과 본문 사이의 공백을 넣으면 로그를 확인할 때 어떤 경우라도 제목과 본문을 분리해서 출력하게 될 것이다. 로그 전체를 살펴보자.
 
     $ git log
     commit 42e769bdf4894310333942ffc5a15151222a87be
@@ -183,16 +213,29 @@ In any case, the separation of subject from body pays off when browsing the log.
 
      Derezz the master control program
 
+     마스터 컨트롤 프로그램 삭제
+
      MCP turned out to be evil and had become intent on world domination.
      This commit throws Tron's disc into MCP (causing its deresolution)
      and turns it back into a chess game.
 
+     마스터 컨트롤 프로그램(MCP)이 사악하게 변해서 세계를 통제하려고 함.
+     이 커밋은 트론의 디스크를 MCP에 (삭제를 위해) 던져 넣어 MCP는 다시 체스
+     게임으로 돌아감.
+
 And now `git log --oneline`, which prints out just the subject line:
+
+이제 `git log --oneline` 명령을 사용하면 제목 행만 출력할 수 있다.
 
     $ git log --oneline
     42e769 Derezz the master control program
 
+    $ git log --oneline
+    42e769 마스터 컨트롤 프로그램 삭제
+
 Or, `git shortlog`, which groups commits by user, again showing just the subject line for concision:
+
+또는 각 커밋을 사용자별로 묶어서 확인하는 명령인 `git shortlog`을 사용할 수 있다. 이 경우에도 간결하게 제목만 표시된다.
 
     $ git shortlog
     Kevin Flynn (1):
@@ -208,8 +251,26 @@ Or, `git shortlog`, which groups commits by user, again showing just the subject
 
     Walter Gibbs (1):
           Introduce protoype chess program
+
+
+    $ git shortlog
+    Kevin Flynn (1):
+          마스터 컨트롤 프로그램 삭제
+
+    Alan Bradley (1):
+          보안 프로그램 "트론" 도입
+
+    Ed Dillinger (3):
+          체스 프로그램 명칭 "MCP"으로 변경
+          체스 프로그램 수정
+          체스 프로그램 개선
+
+    Walter Gibbs (1):
+          프로토타입 체스 프로그램 도입
           
 There are a number of other contexts in git where the distinction between subject line and body kicks in—but none of them work properly without the blank line in between.
+
+여기서 예로 든 경우 외에도 git의 다양한 상황에서 제목 행과 본문을 구분해서 작성해야 한다. 어떤 상황에서든 제목 행과 본문 사이 빈 행이 존재해야 제대로 동작할 것이다.
 
 
 <a name="limit-50"></a>
