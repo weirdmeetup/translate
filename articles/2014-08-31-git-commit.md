@@ -225,32 +225,58 @@ Instead of:
 
 <a name="imperative"></a>
 ### 5. Use the imperative mood in the subject line
+### 5. 제목줄에 명령문을 사용한다
 
 _Imperative mood_ just means "spoken or written as if giving a command or instruction". A few examples:
+여기서 _명령문_ 이란 "명령이나 설명하듯 말하는 것"을 말합니다.
+조금 예를 들어보자면
 
  - Clean your room
  - Close the door
  - Take out the trash
+ - 네 방을 치운다 (Clean your room)
+ - 문을 닫는다 (Close the door)
+ - 쓰레기를 갖다 버린다 (Take out the trash)
+
+같은 것이죠.
  
 Each of the seven rules you're reading about right now are written in the imperative ("Wrap the body at 72 characters", etc.).
+여러분이 지금 읽고 있는 이 글의 각 일곱 규칙 또한 명령조죠. ("본문을 72자 단위로 개행한다" 등등)
 
 The imperative can sound a little rude; that's why we don't often use it. But it's perfect for git commit subject lines. One reason for this is that **git itself uses the imperative whenever it creates a commit on your behalf**.
+명령문은 우리가 자주 쓰지 않기 때문에 조금은 무례하게 보일 수 있습니다.
+하지만 명령문은 Git 커밋의 제목줄에 완벽하게 부합합니다.
+그 이유로는 일단 **Git 자체가 우리 대신 커밋을 만드는 경우 명령조를 사용하기 때문**입니다.
 
 For example, the default message created when using `git merge` reads:
+예를 들어, `git merge`를 썼을 때 생성되는 기본 메시지는
 
     Merge branch 'myfeature'
+    ('myfeature' branch를 병합한다)
 
 And when using `git revert`:
+그리고 `git revert`를 사용했을 때는
 
     Revert "Add the thing with the stuff"
 
     This reverts commit cc87791524aedd593cff5a74532befe7ab69ce9d.
 
+해석하면
+
+    "이런저런 것을 추가한다"를 되돌린다
+
+    이것은 커밋 cc87791524aedd593cff5a74532befe7ab69ce9d을 되돌린다.
+
 Or when clicking the "Merge" button on a GitHub pull request:
+또 GitHub에서 Pull Request에서 Merge 버튼을 누르면
 
     Merge pull request #123 from someuser/somebranch
+    (someuser/somebranch에서 온 pull request #123을 병합한다)
+
+같이 됩니다.
 
 So when you write your commit messages in the imperative, you're following git's own built-in conventions. For example:
+따라서 여러분의 커밋 메시지를 명령문으로 쓸 때, Git의 컨벤션을 따르세요. 예를 들면
 
 <font color="green">
 
@@ -260,8 +286,20 @@ So when you write your commit messages in the imperative, you're following git's
  - Release version 1.0.0
 
 </font>
+<div style="color: green;">
+
+ - 가독성을 위해 서브시스템 X를 리팩토링한다 (Refactor subsystem X for readability)
+ - Getting Started 문서를 갱신한다 (Update getting started documentation)
+ - Deprecated된 메소드를 삭제한다 (Remove deprecated methods)
+ - 버전 1.0.0으로 판올림한다 (Release version 1.0.0)
+
+</div>
 
 Writing this way can be a little awkward at first. We're more used to speaking in the _indicative mood_, which is all about reporting facts. That's why commit messages often end up reading like this:
+이렇게 적는 것은 처음엔 조금 어색합니다.
+우리는 직설법을 더 많이 사용하고, 그렇기에 사실을 알리는것에 치중하게 됩니다.
+그 결과 작성된 커밋 메시지가 이렇게 읽혀집니다.
+
 
 <font color="red">
 
@@ -269,8 +307,15 @@ Writing this way can be a little awkward at first. We're more used to speaking i
  - Changing behavior of X
 
 </font>
+<div style="color: red;">
+
+ - Y로 버그가 고쳐짐 (Fixed bug with Y)
+ - X의 동작의 변화 (Changing behavior of X)
+
+</div>
 
 And sometimes commit messages get written as a description of their contents:
+그리고 때때로 커밋 메시지가 내용의 설명으로 쓰여지기도 합니다.
 
 <font color="red">
 
@@ -278,29 +323,50 @@ And sometimes commit messages get written as a description of their contents:
  - Sweet new API methods
 
 </font>
+<div style="color: red;">
+
+ - 망가진 것을 좀 더 고친 것들 (More fixes for broken stuff)
+ - 좋은 새 API 메소드 (Sweet new API methods)
+
+</div>
 
 To remove any confusion, here's a simple rule to get it right every time.
+혼란함을 해결하는 간단하고 언제나 쓸 수 있는 규칙이 있습니다.
 
 **A properly formed git commit subject line should always be able to complete the following sentence**:
+적절히 구성된 Git 커밋 제목줄은 언제나 이 문장을 완성시킬 수 있습니다.
 
  - If applied, this commit will _<u>your subject line here</u>_
+ - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목줄을 여기에</u>_
 
 For example:
+예를 들자면
 
  - If applied, this commit will <font color="green">_refactor subsystem X for readability_</font>
  - If applied, this commit will <font color="green">_update getting started documentation_</font>
  - If applied, this commit will <font color="green">_remove deprecated methods_</font>
  - If applied, this commit will <font color="green">_release version 1.0.0_</font>
  - If applied, this commit will <font color="green">_merge pull request #123 from user/branch_</font>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;">가독성을 위해 서브시스템 X를 리팩토링한다</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;">Getting Started 문서를 갱신한다</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;">Deprecated된 메소드를 삭제한다</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;"버전 1.0.0으로 판올림한다></span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;">someuser/somebranch에서 온 pull request #123을 병합한다</span>
 
 Notice how this doesn't work for the other non-imperative forms:
+주의할 점은 명령문이 아닌 문장형태는 이 문장으로 완성시킬 수 없습니다.
 
  - If applied, this commit will <font color="red">_fixed bug with Y_</font>
  - If applied, this commit will <font color="red">_changing behavior of X_</font>
  - If applied, this commit will <font color="red">_more fixes for broken stuff_</font>
  - If applied, this commit will <font color="red">_sweet new API methods_</font>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">Y로 버그가 고쳐짐</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">X의 동작의 변화</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">망가진 것을 좀 더 고친 것들</span>
+ - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">좋은 새 API 메소드</span>
 
 > _Remember: Use of the imperative is important only in the subject line. You can relax this restriction when you're writing the body._
+> _기억하세요: 명령문을 쓰는 것은 오직 제목줄에서만 중요합니다. 본문을 쓸 때는 이 제한이 적용되지 않습니다._
 
 <a name="wrap-72"></a>
 ### 6. Wrap the body at 72 characters
