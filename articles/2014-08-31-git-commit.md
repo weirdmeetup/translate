@@ -73,7 +73,11 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 <a name="seven-rules"></a>
 ## The seven rules of a great git commit message
 
+## 성공적인 git 커밋 메시지의 7가지 규칙
+
 > _Keep in mind: [This][1] [has][2] [all][3] [been][4] [said][5] [before][6]._
+
+> _기억해두자. [이 내용은][1] [이미][2] [이전에][3] [다][4] [했던][5] [이야기다][6]._
 
  1. [Separate subject from body with a blank line](#separate)
  1. [Limit the subject line to 50 characters](#limit-50)
@@ -85,7 +89,11 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 
 For example:
 
+다음은 위 규칙을 따르는 커밋 예시다.
+
     Summarize changes in around 50 characters or less
+
+    50자 또는 그 이하로 변경 사항을 요약
 
     More detailed explanatory text, if necessary. Wrap it to about 72
     characters or so. In some contexts, the first line is treated as the
@@ -94,53 +102,109 @@ For example:
     you omit the body entirely); various tools like `log`, `shortlog`
     and `rebase` can get confused if you run the two together.
 
+    필요하다면 더 자세한 설명을 서술한다. 줄은 72자 정도에서 변경한다.
+    맥락에 따라서 첫 행이 커밋의 제목처럼, 나머지 내용이 본문처럼 다뤄지는
+    경우도 있다. 첫 행의 요약과 본문 사이에 빈 행을 넣는 것은 중요하다.
+    (물론 본문을 입력하지 않는 경우라면 무관하다.) 이 규칙을 지키지 않은
+    경우에는 `log` 또는 `shortlog`, `rebase`와 같은 도구를 사용할 때
+    혼란스러울 수 있다.
+
     Explain the problem that this commit is solving. Focus on why you
     are making this change as opposed to how (the code explains that).
     Are there side effects or other unintuitive consequences of this
     change? Here's the place to explain them.
 
+    이 커밋이 해결한 문제에 대해 설명한다. 어떻게 문제를 해결했는지 설명하기
+    보다는 왜 이런 변화를 만들었는가에 집중한다. (어떻게는 코드가 설명한다.)
+    이 변경으로 인해 나타나는 부작용이나 직관적이지 않은 결과가 나타나는가?
+    이 내용을 여기에서 설명한다.
+
     Further paragraphs come after blank lines.
+    
+    문단을 더 추가하고 싶다면 문단 사이에 빈 행을 넣는다.
 
      - Bullet points are okay, too
+
+     - 개조식 서술도 괜찮음
 
      - Typically a hyphen or asterisk is used for the bullet, preceded
        by a single space, with blank lines in between, but conventions
        vary here
 
+     - 블릿(bullet)으로 하이픈(-)이나 별표(*)를 사용하고, 한 칸의 공간을
+       띄고 시작하며, 각 항목 사이 빈 행을 넣는 방식이 일반적이나 다양한
+       관례가 있음
+
     If you use an issue tracker, put references to them at the bottom,
     like this:
+
+    만약 이슈 트래커를 사용한다면 다음처럼 내용 하단에 참조를 추가한다.
 
     Resolves: #123
     See also: #456, #789
 
+    해결: #123
+    참고: #456, #789
+
+
 <a name="separate"></a>
 ### 1. Separate subject from body with a blank line
 
+### 1. 제목과 본문을 빈 행으로 분리하기
+
 From the `git commit` [manpage](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html#_discussion):
+
+`git commit`의 [man 도움말 페이지](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html#_discussion)의 내용이다.
 
 > Though not required, it's a good idea to begin the commit message with a single short (less than 50 character) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, git-format-patch(1) turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body.
 
+> 필수는 아니지만 커밋 메시지를 작성하는 경우에 변경 사항을 (50자 이내로)요약하고 빈 행을 추가한 다음, 더 자세한 설명을 적은 것은 좋은 방식이라 할 수 있다. 구분을 위한 빈 행을 추가하면 짧은 요약을 커밋 제목과 같이 처리하게 되고 그 제목은 Git에서 두루두루 활용할 수 있다. 예를 들어 git-format-patch(1)을 사용했을 때, 커밋은 메일의 형태로 변경하게 되는데 첫 행을 제목으로 사용하게 되고 나머지 커밋 내용을 본문으로 사용하는 것을 볼 수 있다.
+
 Firstly, not every commit requires both a subject and a body. Sometimes a single line is fine, especially when the change is so simple that no further context is necessary. For example:
+
+먼저, 모든 커밋이 제목과 본문으로 이뤄져야 하는 것은 아니다. 한 줄만 작성해도 괜찮은 경우도 많다. 너무나도 사소한 변경이라서 맥락에 대한 자세한 설명이 필요 없을 정도로 간단하면 말이다. 다음과 같은 경우다.
 
     Fix typo in introduction to user guide
 
+    사용자 가이드 서문의 오타를 수정함
+
 Nothing more need be said; if the reader wonders what the typo was, she can simply take a look at the change itself, i.e. use `git show` or `git diff` or `git log -p`.
+
+더 설명할 필요가 없다. 만약 이 커밋을 읽은 사람이 어떤 오타인지 궁금하다면 간단하게 어떤 내용을 변경한 커밋인지 살펴보면 된다. `git show`, `git diff`, 또는 `git log -p`와 같은 명령을 사용해서 말이다.
 
 If you're committing something like this at the command line, it's easy to use the `-m` switch to `git commit`:
 
+이런 내용의 커밋 메시지를 명령행에서 작성한다면 `git commit`의 `-m` 스위치로 쉽게 작성할 수 있다.
+
     $ git commit -m"Fix typo in introduction to user guide"
+
+    $ git commit -m"사용자 가이드 서문의 오타를 수정함"
 
 However, when a commit merits a bit of explanation and context, you need to write a body. For example:
 
+하지만 어떤 변경 사항인지 맥락과 설명이 필요하다면 본문을 작성해야 한다. 다음 예를 보자.
+
     Derezz the master control program
+
+    마스터 컨트롤 프로그램 삭제
 
     MCP turned out to be evil and had become intent on world domination.
     This commit throws Tron's disc into MCP (causing its deresolution)
     and turns it back into a chess game.
 
+    마스터 컨트롤 프로그램(MCP)이 사악하게 변해서 세계를 통제하려고 함.
+    이 커밋은 트론의 디스크를 MCP에 (삭제를 위해) 던져 넣어 MCP는 다시 체스
+    게임으로 돌아감.
+
+    (주: 영화 트론 줄거리)
+
 This is not so easy to commit this with the `-m` switch. You really need a proper editor. If you do not already have an editor set up for use with git at the command line, read [this section of Pro Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
+이런 커밋은 `-m` 스위치를 사용해서 입력하기 어렵다. 이런 내용을 입력하기 위해서는 적합한 편집기를 사용해야 한다. 명령행 git에서 사용하는 편집기를 아직 설정하지 않았다면 [프로 Git의 내용](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)을 읽어보도록 한다.
+
 In any case, the separation of subject from body pays off when browsing the log. Here's the full log entry:
+
+제목과 본문 사이의 공백을 넣으면 로그를 확인할 때 어떤 경우라도 제목과 본문을 분리해서 출력하게 될 것이다. 로그 전체를 살펴보자.
 
     $ git log
     commit 42e769bdf4894310333942ffc5a15151222a87be
@@ -149,16 +213,29 @@ In any case, the separation of subject from body pays off when browsing the log.
 
      Derezz the master control program
 
+     마스터 컨트롤 프로그램 삭제
+
      MCP turned out to be evil and had become intent on world domination.
      This commit throws Tron's disc into MCP (causing its deresolution)
      and turns it back into a chess game.
 
+     마스터 컨트롤 프로그램(MCP)이 사악하게 변해서 세계를 통제하려고 함.
+     이 커밋은 트론의 디스크를 MCP에 (삭제를 위해) 던져 넣어 MCP는 다시 체스
+     게임으로 돌아감.
+
 And now `git log --oneline`, which prints out just the subject line:
+
+이제 `git log --oneline` 명령을 사용하면 제목 행만 출력할 수 있다.
 
     $ git log --oneline
     42e769 Derezz the master control program
 
+    $ git log --oneline
+    42e769 마스터 컨트롤 프로그램 삭제
+
 Or, `git shortlog`, which groups commits by user, again showing just the subject line for concision:
+
+또는 각 커밋을 사용자별로 묶어서 확인하는 명령인 `git shortlog`을 사용할 수 있다. 이 경우에도 간결하게 제목만 표시된다.
 
     $ git shortlog
     Kevin Flynn (1):
@@ -174,32 +251,66 @@ Or, `git shortlog`, which groups commits by user, again showing just the subject
 
     Walter Gibbs (1):
           Introduce protoype chess program
+
+
+    $ git shortlog
+    Kevin Flynn (1):
+          마스터 컨트롤 프로그램 삭제
+
+    Alan Bradley (1):
+          보안 프로그램 "트론" 도입
+
+    Ed Dillinger (3):
+          체스 프로그램 명칭 "MCP"으로 변경
+          체스 프로그램 수정
+          체스 프로그램 개선
+
+    Walter Gibbs (1):
+          프로토타입 체스 프로그램 도입
           
 There are a number of other contexts in git where the distinction between subject line and body kicks in—but none of them work properly without the blank line in between.
+
+여기서 예로 든 경우 외에도 git의 다양한 상황에서 제목 행과 본문을 구분해서 작성해야 한다. 어떤 상황에서든 제목 행과 본문 사이 빈 행이 존재해야 제대로 동작할 것이다.
 
 
 <a name="limit-50"></a>
 ### 2. Limit the subject line to 50 characters
 
+### 2. 제목 행을 50자로 제한하기
+
 50 characters is not a hard limit, just a rule of thumb. Keeping subject lines at this length ensures that they are readable, and forces the author to think for a moment about the most concise way to explain what's going on.
+
+제목 행을 50자로 작성하는 것은 강제로 제한하는 것이 아니라 단지 경험에 의한 규칙에 해당한다. 제목 행을 이 길이에 맞춰 작성하면 읽기 편할 뿐더러 작성자로 하여금 무슨 일이 일어나는지 간결하게 작성하는데 집중할 수 있도록 돕게 된다.
 
 > _Tip: If you're having a hard time summarizing, you might be committing too many changes at once. Strive for [_atomic commits_](http://www.freshconsulting.com/atomic-commits/) (a topic for a separate post)._
 
+> _팁: 제목을 요약하는 것이 너무 어렵다면 아마도 한 번에 커밋하기에 너무 많은 변경을 포함하는 경우인지도 모른다. [_원자적 커밋_](http://www.freshconsulting.com/atomic-comits/)을 하도록 노력하자. (별도의 포스트 주제다.)_
+
 GitHub's UI is fully aware of these conventions. It will warn you if you go past the 50 character limit:
+
+Github의 UI는 이런 관례를 잘 알고 있다. 만약 50자 이상을 입력하려고 한다면 경고 표시가 나타난다.
 
 ![gh1](http://i.imgur.com/zyBU2l6.png)
 
 And will truncate any subject line longer than 69 characters with an ellipsis:
 
+그리고 69자 이상의 제목 행이라면 다음처럼 줄임 표시가 나타난다.
+
 ![gh2](http://i.imgur.com/27n9O8y.png)
 
 So shoot for 50 characters, but consider 69 the hard limit.
+
+그러므로 50자를 기준으로 적되, 최대 상한선은 69자임을 염두하자.
 
 
 <a name="capitalize"></a>
 ### 3. Capitalize the subject line
 
+### 3. 제목 행 첫 글자는 대문자로 쓰기
+
 This is as simple as it sounds. Begin all subject lines with a capital letter.
+
+이 규칙은 말 그대로 간단하다. 제목 행의 모든 단어는 대문자로 시작한다.
 
 For example:
 
@@ -209,10 +320,23 @@ Instead of:
 
  - <font color="red">accelerate to 88 miles per hour</font>
 
+이렇게 작성하는 것 보다는,
+
+ - <font color="red">accelerate to 88 miles per hour</font>
+
+다음처럼 작성하자.
+
+ - <font color="green">Accelerate to 88 miles per hour</font>
+
+
 <a name="end"></a>
 ### 4. Do not end the subject line with a period
 
+### 4. 제목 행 끝에 마침표 넣지 않기
+
 Trailing punctuation is unnecessary in subject lines. Besides, space is precious when you're trying to keep them to [50 chars or less](#limit-50).
+
+제목 행 끝에는 구두점이 필요 없다. 게다가 [50자 미만](#limit-50) 규칙을 따르기 위해서는 이런 사소한 공간도 소중하다.
 
 Example:
 
@@ -222,6 +346,14 @@ Instead of:
 
  - <font color="red">Open the pod bay doors.</font>
 
+
+이렇게 작성하는 것 보다는,
+
+ - <font color="red">Open the pod bay doors.</font>
+
+다음과 같이 작성한다.
+
+ - <font color="green">Open the pod bay doors</font>
 
 <a name="imperative"></a>
 ### 5. Use the imperative mood in the subject line
