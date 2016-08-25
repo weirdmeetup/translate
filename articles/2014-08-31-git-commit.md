@@ -108,7 +108,7 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 <a name="seven-rules"></a>
 ## The seven rules of a great git commit message
 
-## 성공적인 git 커밋 메시지의 7가지 규칙
+## 훌륭한 git 커밋 메시지의 7가지 규칙
 
 > _Keep in mind: [This][1] [has][2] [all][3] [been][4] [said][5] [before][6]._
 
