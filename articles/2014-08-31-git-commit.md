@@ -501,7 +501,7 @@ To remove any confusion, here's a simple rule to get it right every time.
 혼란함을 해결하는 간단하고 언제나 쓸 수 있는 규칙이 있습니다.
 
 **A properly formed git commit subject line should always be able to complete the following sentence**:
-적절히 구성된 Git 커밋 제목줄은 언제나 이 문장을 완성시킬 수 있습니다.
+**적절히 구성된 Git 커밋 제목줄은 언제나 이 문장을 완성시킬 수 있습니다.**
 
  - If applied, this commit will _<u>your subject line here</u>_
  - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목줄을 여기에</u>_
@@ -540,8 +540,8 @@ Notice how this doesn't work for the other non-imperative forms:
 ### 6. 본문을 72자 단위로 개행한다
 
 Git never wraps text automatically. When you write the body of a commit message, you must mind its right margin, and wrap text manually.
-Git은 text를 절대 자동으로 개행하지 않습니다.
-커밋 메시지의 본문을 적을 때엔 본문의 우측 여백을 신경쓰며 작성해야하고, 본문을 정해진대로 개행해야 합니다.
+Git은 본문을 절대 자동으로 개행하지 않습니다.
+커밋 메시지의 본문을 적을 때엔 본문 우측 여백을 신경쓰며 작성해야하고, 본문을 정해진대로 개행해야 합니다.
 
 The recommendation is to do this at 72 characters, so that git has plenty of room to indent text while still keeping everything under 80 characters overall.
 72자 기준으로 개행하는 것을 추천드립니다. 그렇게 하면 전체 80자의 공간 중 Git이 들여쓰기 문자를 위해 여유 문자를 가질 수 있습니다.
@@ -551,12 +551,12 @@ A good text editor can help here. It's easy to configure Vim, for example, to wr
 예를 들어, Vim에서는 설정하기 쉽습니다.
 전통적으로 Vim에서 Git 커밋 메시지를 작성하면 72자 단위로 개행시켜줍니다.
 하지만 IDE들은 커밋 메시지에서의 개행에 대한 지원이 끔찍합니다.
-(최근 버전의 IntelliJ IDEA는 [마침내](http://youtrack.jetbrains.com/issue/IDEA-53615) [좀](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [쓸만해졌지만](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) 말이죠.)
+(최근 버전의 IntelliJ IDEA는 [마침내](http://youtrack.jetbrains.com/issue/IDEA-53615) [좀](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [쓸만해졌지만](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) 말이죠.)
 
 
 <a name="why-not-how"></a>
 ### 7. Use the body to explain what and why vs. how
-### 7. 본문에 어떻게 바꿨는지 보단 무엇을 왜 바꿨는지 설명한다
+### 7. 어떻게 보다는 무엇과 왜를 설명한다
 
 This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) is a great example of explaining what changed and why:
 이 [Bitcoin Core의 커밋](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)은 무엇이 바뀌었고 왜 바꿨는지 설명하는 멋진 예시입니다.
@@ -639,7 +639,7 @@ Remember that whether you use Bash or Z shell, there are [tab completion scripts
 여러분이 Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 스위치 할때의 고통을 줄여주니 기억해두세요.
 
 ### Read Pro Git
-### Pro Git 읽기
+### Pro Git 을 읽을 것
 
 The [Pro Git](http://git-scm.com/book) book is available online for free, and it's fantastic. Take advantage!
 Pro Git은 온라인 상에서 무료로 읽어볼 수 있고 내용도 환상적입니다.
