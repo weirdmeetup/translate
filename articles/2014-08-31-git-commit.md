@@ -642,7 +642,7 @@ When it comes to wielding the full power of git, it's command-line all the way.
 Git이 진가를 발휘하는 때는 바로 커맨드 라인을 사용할 때다.
 
 Remember that whether you use Bash or Z shell, there are [tab completion scripts](http://git-scm.com/book/en/Git-Basics-Tips-and-Tricks) that take much of the pain out of remembering the subcommands and switches.
-여Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 전환할 때의 고통을 줄여주니 기억하자.
+Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 전환할 때의 고통을 줄여주니 기억하자.
 
 ### Read Pro Git
 ### Pro Git 을 읽을 것
