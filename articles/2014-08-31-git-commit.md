@@ -633,7 +633,7 @@ Certain git-related IDE functions are invaluable, like calling `git rm` when you
 모든 것이 멀리 떨어지는 부분은 커밋, 머지, 리베이스나 수준 높은 기록 분석을 IDE로 시도할 때 입니다.
 
 When it comes to wielding the full power of git, it's command-line all the way.
-Git의 전력을 발휘하는 것은 바로 커맨드 라인을 쓸 때입니다.
+Git이 진가를 발휘하는 때는 바로 커맨드 라인을 사용할 때입니다.
 
 Remember that whether you use Bash or Z shell, there are [tab completion scripts](http://git-scm.com/book/en/Git-Basics-Tips-and-Tricks) that take much of the pain out of remembering the subcommands and switches.
 여러분이 Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 스위치 할때의 고통을 줄여주니 기억해두세요.
