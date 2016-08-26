@@ -392,7 +392,7 @@ Instead of:
 
 <a name="imperative"></a>
 ### 5. Use the imperative mood in the subject line
-### 5. 제목줄에 명령문을 사용한다
+### 5. 제목 행에 명령문을 사용한다
 
 _Imperative mood_ just means "spoken or written as if giving a command or instruction". A few examples:
 여기서 _명령문_ 이란 "명령이나 설명하듯 말하는 것"을 의미한다.
@@ -412,7 +412,7 @@ Each of the seven rules you're reading about right now are written in the impera
 
 The imperative can sound a little rude; that's why we don't often use it. But it's perfect for git commit subject lines. One reason for this is that **git itself uses the imperative whenever it creates a commit on your behalf**.
 명령문은 우리가 자주 쓰지 않기 때문에 조금은 무례하게 보일 수 있다.
-하지만 명령문은 Git 커밋의 제목줄에 완벽하게 부합한다.
+하지만 명령문은 Git 커밋의 제목 행에 완벽하게 부합한다.
 그 이유로는 일단 **Git 자체가 우리 대신 자동으로 커밋을 생성하는 경우, 명령조를 사용하기 때문**이다.
 
 For example, the default message created when using `git merge` reads:
@@ -505,7 +505,7 @@ To remove any confusion, here's a simple rule to get it right every time.
 **이 문장에 기존 커밋 내용을 대입하였을 때 문장으로써 적절하면 그것은 적절한 Git 커밋 제목 행이다.**
 
  - If applied, this commit will _<u>your subject line here</u>_
- - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목줄을 여기에</u>_
+ - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목 행을 여기에</u>_
 
 For example:
 예를 들자면
@@ -534,7 +534,7 @@ Notice how this doesn't work for the other non-imperative forms:
  - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">좋은 새 API 메소드</span>
 
 > _Remember: Use of the imperative is important only in the subject line. You can relax this restriction when you're writing the body._
-> _기억할 것: 명령문을 쓰는 것은 오직 제목줄에서만 중요하다. 본문을 쓸 때는 이 제한이 적용되지 않는다._
+> _기억할 것: 명령문을 쓰는 것은 오직 제목 행에서만 중요하다. 본문을 쓸 때는 이 제한이 적용되지 않는다._
 
 <a name="wrap-72"></a>
 ### 6. Wrap the body at 72 characters
