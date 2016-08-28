@@ -7,7 +7,7 @@ date: Sun Aug 31 02:45:42 +0200 2014
     <a href="http://xkcd.com/1296/"><img src="http://imgs.xkcd.com/comics/git_commit.png"/></a>
 </div>
 
-As a project drags on, my git commit messages get less and less informative.
+As a project drags on, my git commit messages get less and less informative.  
 프로젝트가 점점 지루하게 늘어질 수록 커밋 메시지는 점점 더 무의미해져 간다.
 
 ---
@@ -22,7 +22,7 @@ As a project drags on, my git commit messages get less and less informative.
 
 If you browse the log of any random git repository, you will probably find its commit messages are more or less a mess. For example, take a look at [these gems](https://github.com/spring-projects/spring-framework/commits/e5f4b49?author=cbeams) from my early days committing to Spring:
 
-Git 저장소 중 아무거나 골라서 살펴보면 보면, 커밋 메시지가 뒤죽박죽임을 발견할 수 있을 것이다. 예를 들어 내가 초창기에 Spring에 커밋한 [gem들](https://github.com/spring-projects/spring-framework/commits/e5f4b49?author=cbeams)을 보라.
+Git 저장소 중 아무거나 골라 살펴보면, 커밋 메시지가 뒤죽박죽인 것을 발견할 수 있을 것이다. 예를 들어 내가 초창기에 Spring에 커밋한 [gem들](https://github.com/spring-projects/spring-framework/commits/e5f4b49?author=cbeams)을 보라.
 
     $ git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"
 
@@ -34,7 +34,7 @@ Git 저장소 중 아무거나 골라서 살펴보면 보면, 커밋 메시지�
 
 Yikes. Compare that with these [more recent](https://github.com/spring-projects/spring-framework/commits/5ba3db?author=philwebb) commits from the same repository:
 
-이런. 이것과 동일 저장소의 [최근](https://github.com/spring-projects/spring-framework/commits/5ba3db?author=philwebb) 커밋들을 비교해 보자.
+맙소사. 이것과 동일 저장소의 [최근](https://github.com/spring-projects/spring-framework/commits/5ba3db?author=philwebb) 커밋들을 비교해 보자.
 
     $ git log --oneline -5 --author pwebb --before "Sat Aug 30 2014"
 
@@ -45,32 +45,32 @@ Yikes. Compare that with these [more recent](https://github.com/spring-projects/
     ac8326d Polish mockito usage
 
 Which would you rather read?
-어떤 것을 더 읽고 싶은가?
+어떤 커밋 메시지가 더 읽기 좋은가?
 
 The former varies wildly in length and form; the latter is concise and consistent. The former is what happens by default; the latter never happens by accident.
 
-앞의 것은 길이와 형식이 제각각이지만, 뒤의 것은 간결하고 일관성이 있다. 앞의 것은 자연스레 일어나는 일이지만, 뒤의 것은 절대 우연히 일어나지 않는다.
+앞의 것은 길이와 형식이 제각각이지만, 뒤의 것은 간결하고 일관성이 있다. 앞의 것은 자연스레 발생하지만, 뒤의 것은 손을 대지 않는 이상 절대 우연히 일어나는 일이 아니다.
 
 While many repositories' logs look like the former, there are exceptions. The [Linux kernel](https://github.com/torvalds/linux/commits/master) and [git itself](https://github.com/git/git/commits/master) are great examples. Look at [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master), or any repository managed by [Tim Pope](https://github.com/tpope/vim-pathogen/commits/master).
 
-많은 저장소들의 로그가 앞의 것와 유사하지만, 예외도 존재한다. [리눅스 커널](https://github.com/torvalds/linux/commits/master)과 [Git](https://github.com/git/git/commits/master)은 훌륭한 견본이다. [스프링  부트](https://github.com/spring-projects/spring-boot/commits/master)나 [Tim Pope](https://github.com/tpope/vim-pathogen/commits/master)가 운영하는 다른 저장소도 살펴보라.
+많은 저장소들의 로그가 앞의 것와 유사하지만, 예외도 존재한다. [리눅스 커널](https://github.com/torvalds/linux/commits/master)과 [Git](https://github.com/git/git/commits/master)은 훌륭한 견본이다. [스프링 부트](https://github.com/spring-projects/spring-boot/commits/master)나 [Tim Pope](https://github.com/tpope/vim-pathogen/commits/master)가 운영하는 다른 저장소도 살펴보라.
 
 The contributors to these repositories know that a well-crafted git commit message is the best way to communicate _context_ about a change to fellow developers (and indeed to their future selves). A diff will tell you _what_ changed, but only the commit message can properly tell you _why_. Peter Hutterer [makes this point](http://who-t.blogspot.co.at/2009/12/on-commit-messages.html) well:
 
-이 저장소들의 기여자들은 잘 다듬어진 커밋 메시지가 변경사항에 대한 _컨텍스트_ 를 동료 개발자(뿐만 아니라 실제로 미래의 자기 자신)와 공유할 수 있는 최고의 수단임을 잘 알고 있다. diff로 _어떤 것_이 변경되었는지 확인할 수 있지만, 오직 커밋 메시지를 통해서만 그 _이유_를 알 수 있을 것이다.
+이 저장소들의 기여자들은 잘 다듬어진 커밋 메시지가 변경사항에 대한 _맥락_ 을 동료 개발자(뿐만 아니라 실제로 미래의 자기 자신)와 공유할 수 있는 최고의 수단임을 잘 알고 있다. diff로 _어떤 것_이 변경되었는지 확인할 수 있지만, 오직 커밋 메시지를 통해서만 그 _이유_를 알 수 있을 것이다. Peter Hutter가 [이 점을 잘 설명해 놓았다](http://who-t.blogspot.co.at/2009/12/on-commit-messages.html).
 
 > Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to [reducing it](http://www.osnews.com/story/19266/WTFs_m) [as much] as possible. Commit messages can do exactly that and as a result, _a commit message shows whether a developer is a good collaborator_.
   
   
-> 코드 조각에 대한 컨텍스트를 다시 수립하는 것은 낭비이다. 이를 완벽하게 피할 수는 없기 때문에 가능한 한 점차 [줄여 가려고](http://www.osnews.com/story/19266/WTFs_m) 노력해야만 한다. 커밋 메시지는 정확히 그것을 할 수 있고, 그 결과 _커밋 메시지 하나로 어떤 개발자가 좋은 협력자인지 아닌지 알 수 있다_.
+> 코드 조각의 주변 맥락을 다시 살펴야 하는 것은 쓸모 없는 일이다. 이를 완벽하게 피할 수는 없기 때문에, 가능한 한 점차 [코드 맥락을 다시 살피는 일을 줄이기 위해](http://www.osnews.com/story/19266/WTFs_m) 노력해야 한다. 커밋 메시지는 정확히 그런 일을 할 수 있고, 그 결과 _커밋 메시지 하나로 어떤 개발자가 좋은 협력자인지 아닌지 알 수 있다_.
 
 If you haven't given much thought to what makes a great git commit message, it may be the case that you haven't spent much time using `git log` and related tools. There is a vicious cycle here: because the commit history is unstructured and inconsistent, one doesn't spend much time using or taking care of it. And because it doesn't get used or taken care of, it remains unstructured and inconsistent.
 
-만약 당신이 Git 커밋 메시지를 훌륭하게 쓰기 위해 깊은 고민을 하지 않았다면, `git log`와 이에 연관된 도구를 사용하는데에도 그리 많은 시간을 쏟지 않았을 것이다. 악의 순환고리는 이러하다. 커밋 이력이 체계와 일관성이 없기 때문에, 누구도 이를 사용하거나 관리하기 위해 많은 시간을 들이지 않는다. 그리고 사용되거나 관리되지도 않기 때문에 여전히 체계와 일관성이 없는 채로 남겨진다.
+만약 당신이 Git 커밋 메시지를 훌륭하게 쓰기 위해 깊은 고민을 하지 않았다면, `git log`와 이에 연관된 도구를 사용하는데에도 그리 많은 시간을 쏟지 않았을 것이다. 악의 고리는 다음과 같이 발생난다. 커밋 이력이 체계와 일관성이 없기 때문에, 누구도 이를 사용하거나 관리하기 위해 많은 시간을 들이지 않는다. 그리고 사용되거나 관리되지도 않기 때문에 여전히 체계와 일관성이 없는 채로 남겨진다.
 
 But a well-cared for log is a beautiful and useful thing. `git blame`, `revert`, `rebase`, `log`, `shortlog` and other subcommands come to life. Reviewing others' commits and pull requests becomes something worth doing, and suddenly can be done independently. Understanding why something happened months or years ago becomes not only possible but efficient.
 
-그러나 잘 관리된 로그는 아름답고 유용하다. `git blame`이나 `revert`, `rebase`, `log`, `shortlog`과 다른 하위 명령어들도 활력을 얻게 된다. 다른 사람의 커밋과 풀 리퀘스트를 리뷰하는 것이 가치있는 활동이 되고, 어느순간 독립적으로 완료할 수 있게 된다. 몇 달 전이나 몇 년 전에 어떤 일이 일어난 이유를 이해하는 것이 가능하게 되는 것은 물론, 효과적으로 이해할 수 있게 된다.
+그러나 잘 관리된 로그는 아름답고 유용하다. `git blame`이나 `revert`, `rebase`, `log`, `shortlog`와 다른 하위 명령어들도 활력을 얻게 된다. 다른 사람의 커밋과 풀 리퀘스트를 리뷰하는 것이 가치있는 활동이 되고, 어느새 독립적으로 완료할 수 있게 된다. 몇 달 전이나 몇 년 전에 어떤 일이 일어난 이유에 대해 알 수 있을 뿐더러, 효과적으로 이해할 수 있게 된다.
 
 A project's long-term success rests (among other things) on its maintainability, and a maintainer has few tools more powerful than his project's log. It's worth taking the time to learn how to care for one properly. What may be a hassle at first soon becomes habit, and eventually a source of pride and productivity for all involved.
 
@@ -78,11 +78,11 @@ A project's long-term success rests (among other things) on its maintainability,
 
 In this post, I am addressing just the most basic element of keeping a healthy commit history: how to write an individual commit message. There are other important practices like commit squashing that I am not addressing here. Perhaps I'll do that in a subsequent post.
 
-이 글에서 나는 단지 건강한 커밋 이력을 유지하기 위한 가장 기본적인 요소를 주장하고 있을 뿐이다. 바로 개인 커밋 메시지를 어떻게 쓸 것인가 말이다. 여기서 주장하지 않은 커밋 스쿼싱(commit squashing: 여러 커밋을 하나로 모으는 것) 같은 다른 중요한 실천요소들도 많다. 그것은 아마 다음 글에서 다루게 될 것이다.
+이 글에서 나는 단지 건강한 커밋 이력을 유지하기 위한 가장 기본적인 요소를 주장하고 있을 뿐이다. 바로 개별 커밋 메시지를 어떻게 쓸 것인가 말이다. 여기서 주장하지 않은 커밋 스쿼싱(commit squashing: 여러 커밋을 하나로 모으는 것) 같은 다른 중요한 실천요소들도 많다. 그것은 아마 다음 글에서 다루게 될 것이다.
 
 Most programming languages have well-established conventions as to what constitutes idiomatic style, i.e. naming, formatting and so on. There are variations on these conventions, of course, but most developers agree that picking one and sticking to it is far better than the chaos that ensues when everybody does their own thing.
 
-대부분의 프로그램의 언어들은 기여자들의 관용적인 스타일(네이밍, 포매팅 등등)에 대한 컨벤션이 잘 세워져 있다. 이러한 컨벤션들의 종류도 물론 다양하지만, 대부분의 개발자들은 한 가지 스타일 골라 그것만 사용하는 것이 모두가 각자 스타일로 개발한 결과로 인해 혼돈을 겪는 것보다는 훨씬 좋다는 것에 동의한다.
+대부분의 프로그램의 언어들은 기여자들의 관용적인 스타일(명명법, 포매팅 등등)에 대한 컨벤션(코딩 스타일 규약)이 잘 세워져 있다. 물론 컨벤션의 종류가 다양하지만, 모두가 각자의 스타일을 따라 개발하여 혼돈을 겪는 것보다, 한 가지 스타일 골라 그것만 사용하는 것이 훨씬 좋다는 것에 대부분의 개발자들은 동의한다.
 
 A team's approach to its commit log should be no different. In order to create a useful revision history, teams should first agree on a commit message convention that defines at least the following three things:
 
@@ -103,7 +103,7 @@ A team's approach to its commit log should be no different. In order to create a
 
 Fortunately, there are well-established conventions as to what makes an idiomatic git commit message. Indeed, many of them are assumed in the way certain git commands function. There's nothing you need to re-invent. Just follow the [seven rules](#seven-rules) below and you're on your way to committing like a pro.
 
-다행히도 관용적인 Git 커밋 메시지에 대해 잘 만들어진 컨벤션이 있다. 사실 컨벤션의 상당 부분은 Git 명령어 기능처럼 보인다. 다시 발명해야 할 것은 없다. 그저 아래의 [7가지 규칙](#seven-rules)을 따라 프로처럼 커밋을 하면 된다.
+다행히도 관용적인 Git 커밋 메시지에 대해 잘 만들어진 컨벤션이 있다. 사실 컨벤션의 상당 부분은 Git 명령어 기능처럼 보인다. 다시 발명해야 할 것은 없다. 그저 아래의 [7가지 규칙](#seven-rules)을 따르고, 자신있게 프로처럼 커밋하면 된다.
 
 <a name="seven-rules"></a>
 ## The seven rules of a great git commit message
