@@ -108,7 +108,7 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 <a name="seven-rules"></a>
 ## The seven rules of a great git commit message
 
-## 성공적인 git 커밋 메시지의 7가지 규칙
+## 훌륭한 git 커밋 메시지의 7가지 규칙
 
 > _Keep in mind: [This][1] [has][2] [all][3] [been][4] [said][5] [before][6]._
 
@@ -137,7 +137,7 @@ For example:
     you omit the body entirely); various tools like `log`, `shortlog`
     and `rebase` can get confused if you run the two together.
 
-    필요하다면 더 자세한 설명을 서술한다. 줄은 72자 정도에서 변경한다.
+    필요하다면 더 자세한 설명을 서술한다. 한 행은 72자 정도에서 변경한다.
     맥락에 따라서 첫 행이 커밋의 제목처럼, 나머지 내용이 본문처럼 다뤄지는
     경우도 있다. 첫 행의 요약과 본문 사이에 빈 행을 넣는 것은 중요하다.
     (물론 본문을 입력하지 않는 경우라면 무관하다.) 이 규칙을 지키지 않은
@@ -193,7 +193,7 @@ From the `git commit` [manpage](https://www.kernel.org/pub/software/scm/git/docs
 
 > Though not required, it's a good idea to begin the commit message with a single short (less than 50 character) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, git-format-patch(1) turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body.
 
-> 필수는 아니지만 커밋 메시지를 작성하는 경우에 변경 사항을 (50자 이내로)요약하고 빈 행을 추가한 다음, 더 자세한 설명을 적은 것은 좋은 방식이라 할 수 있다. 구분을 위한 빈 행을 추가하면 짧은 요약을 커밋 제목과 같이 처리하게 되고 그 제목은 Git에서 두루두루 활용할 수 있다. 예를 들어 git-format-patch(1)을 사용했을 때, 커밋은 메일의 형태로 변경하게 되는데 첫 행을 제목으로 사용하게 되고 나머지 커밋 내용을 본문으로 사용하는 것을 볼 수 있다.
+> 필수는 아니지만 커밋 메시지를 작성하는 경우에 변경 사항을 (50자 이내로)요약하고 빈 행을 추가한 다음, 더 자세한 설명을 적은 것은 좋은 방식이라 할 수 있다. 구분을 위한 빈 행을 추가하면 짧은 요약을 커밋 제목과 같이 처리하게 되고 그 제목은 Git에서 두루두루 활용할 수 있다. 예를 들어 git-format-patch(1)을 사용하면, 커밋은 메일 형태로 변경되고, 첫 행은 제목으로, 나머지 커밋 내용은 본문이 된다.
 
 Firstly, not every commit requires both a subject and a body. Sometimes a single line is fine, especially when the change is so simple that no further context is necessary. For example:
 
@@ -335,7 +335,7 @@ And will truncate any subject line longer than 69 characters with an ellipsis:
 
 So shoot for 50 characters, but consider 69 the hard limit.
 
-그러므로 50자를 기준으로 적되, 최대 상한선은 69자임을 염두하자.
+그러므로 50자를 기준으로 적되, 최대 상한선은 69자임을 염두에 두자.
 
 
 <a name="capitalize"></a>
