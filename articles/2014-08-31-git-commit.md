@@ -392,11 +392,11 @@ Instead of:
 
 <a name="imperative"></a>
 ### 5. Use the imperative mood in the subject line
-### 5. 제목줄에 명령문을 사용한다
+### 5. 제목 행에 명령문을 사용한다
 
 _Imperative mood_ just means "spoken or written as if giving a command or instruction". A few examples:
-여기서 _명령문_ 이란 "명령이나 설명하듯 말하는 것"을 말합니다.
-조금 예를 들어보자면
+여기서 _명령문_ 이란 "명령이나 설명하듯 말하는 것"을 의미한다.
+예를 들어보자면
 
  - Clean your room
  - Close the door
@@ -405,15 +405,15 @@ _Imperative mood_ just means "spoken or written as if giving a command or instru
  - 문을 닫는다 (Close the door)
  - 쓰레기를 갖다 버린다 (Take out the trash)
 
-같은 것이죠.
+같은 것을 말한다.
  
 Each of the seven rules you're reading about right now are written in the imperative ("Wrap the body at 72 characters", etc.).
-여러분이 지금 읽고 있는 이 글의 각 일곱 규칙 또한 명령조죠. ("본문을 72자 단위로 개행한다" 등등)
+당신이 지금 읽고 있는 이 글의 각 일곱 규칙 또한 명령조다. ("본문을 72자 단위로 개행한다" 등등)
 
 The imperative can sound a little rude; that's why we don't often use it. But it's perfect for git commit subject lines. One reason for this is that **git itself uses the imperative whenever it creates a commit on your behalf**.
-명령문은 우리가 자주 쓰지 않기 때문에 조금은 무례하게 보일 수 있습니다.
-하지만 명령문은 Git 커밋의 제목줄에 완벽하게 부합합니다.
-그 이유로는 일단 **Git 자체가 우리 대신 커밋을 만드는 경우 명령조를 사용하기 때문**입니다.
+명령문은 우리가 자주 쓰지 않기 때문에 조금은 무례하게 보일 수 있다.
+하지만 명령문은 Git 커밋의 제목 행에 완벽하게 부합한다.
+그 이유로는 일단 **Git 자체가 우리 대신 자동으로 커밋을 생성하는 경우, 명령조를 사용하기 때문**이다.
 
 For example, the default message created when using `git merge` reads:
 예를 들어, `git merge`를 썼을 때 생성되는 기본 메시지는
@@ -440,10 +440,11 @@ Or when clicking the "Merge" button on a GitHub pull request:
     Merge pull request #123 from someuser/somebranch
     (someuser/somebranch에서 온 pull request #123을 병합한다)
 
-같이 됩니다.
+같이 된다.
 
 So when you write your commit messages in the imperative, you're following git's own built-in conventions. For example:
-따라서 여러분의 커밋 메시지를 명령문으로 쓸 때, Git의 컨벤션을 따르세요. 예를 들면
+따라서 여러분의 커밋 메시지를 명령문으로 쓸 때, Git의 컨벤션을 따르라.
+예를 들면
 
 <font color="green">
 
@@ -463,9 +464,9 @@ So when you write your commit messages in the imperative, you're following git's
 </div>
 
 Writing this way can be a little awkward at first. We're more used to speaking in the _indicative mood_, which is all about reporting facts. That's why commit messages often end up reading like this:
-이렇게 적는 것은 처음엔 조금 어색합니다.
-우리는 직설법을 더 많이 사용하고, 그렇기에 사실을 알리는것에 치중하게 됩니다.
-그 결과 작성된 커밋 메시지가 이렇게 읽혀집니다.
+이렇게 적는 것은 처음엔 조금 어색하다.
+그래서 우리는 직설법을 더 많이 사용하고 그 결과 사실을 알리는 것에 치중하게 된다.
+그렇게 작성된 커밋 메시지는 이런 식으로 보여지게 된다.
 
 
 <font color="red">
@@ -482,7 +483,7 @@ Writing this way can be a little awkward at first. We're more used to speaking i
 </div>
 
 And sometimes commit messages get written as a description of their contents:
-그리고 때때로 커밋 메시지가 내용의 설명으로 쓰여지기도 합니다.
+그리고 때때로 커밋 메시지가 내용의 설명으로 쓰여지기도 한다.
 
 <font color="red">
 
@@ -498,13 +499,13 @@ And sometimes commit messages get written as a description of their contents:
 </div>
 
 To remove any confusion, here's a simple rule to get it right every time.
-혼란함을 해결하는 간단하고 언제나 쓸 수 있는 규칙이 있습니다.
+혼란함을 해결하는 간단하고 언제나 쓸 수 있는 규칙이 있다.
 
 **A properly formed git commit subject line should always be able to complete the following sentence**:
-적절히 구성된 Git 커밋 제목줄은 언제나 이 문장을 완성시킬 수 있습니다.
+**이 문장에 기존 커밋 내용을 대입하였을 때 문장으로써 적절하면 그것은 적절한 Git 커밋 제목 행이다.**
 
  - If applied, this commit will _<u>your subject line here</u>_
- - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목줄을 여기에</u>_
+ - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목 행을 여기에</u>_
 
 For example:
 예를 들자면
@@ -521,7 +522,7 @@ For example:
  - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: green;">someuser/somebranch에서 온 pull request #123을 병합한다</span>
 
 Notice how this doesn't work for the other non-imperative forms:
-주의할 점은 명령문이 아닌 문장형태는 이 문장으로 완성시킬 수 없습니다.
+주의할 점은 명령문이 아닌 문장형태는 이 문장으로 완성시킬 수 없다.
 
  - If applied, this commit will <font color="red">_fixed bug with Y_</font>
  - If applied, this commit will <font color="red">_changing behavior of X_</font>
@@ -533,33 +534,34 @@ Notice how this doesn't work for the other non-imperative forms:
  - 만약 이 커밋이 적용되면 이 커밋은 <span style="color: red;">좋은 새 API 메소드</span>
 
 > _Remember: Use of the imperative is important only in the subject line. You can relax this restriction when you're writing the body._
-> _기억하세요: 명령문을 쓰는 것은 오직 제목줄에서만 중요합니다. 본문을 쓸 때는 이 제한이 적용되지 않습니다._
+> _기억할 것: 명령문을 쓰는 것은 오직 제목 행에서만 중요하다. 본문을 쓸 때는 이 제한이 적용되지 않는다._
 
 <a name="wrap-72"></a>
 ### 6. Wrap the body at 72 characters
 ### 6. 본문을 72자 단위로 개행한다
 
 Git never wraps text automatically. When you write the body of a commit message, you must mind its right margin, and wrap text manually.
-Git은 text를 절대 자동으로 개행하지 않습니다.
-커밋 메시지의 본문을 적을 때엔 본문의 우측 여백을 신경쓰며 작성해야하고, 본문을 정해진대로 개행해야 합니다.
+Git은 본문을 절대 자동으로 개행하지 않는다.
+커밋 메시지의 본문을 적을 때엔 본문 우측 여백을 신경쓰며 작성해야하고, 본문을 정해진대로 손수 개행해야 한다.
 
 The recommendation is to do this at 72 characters, so that git has plenty of room to indent text while still keeping everything under 80 characters overall.
-72자 기준으로 개행하는 것을 추천드립니다. 그렇게 하면 전체 80자의 공간 중 Git이 들여쓰기 문자를 위해 여유 문자를 가질 수 있습니다.
+72자 기준으로 개행하는 것을 추천한다.
+그렇게 하면 전체 80자의 공간 중 Git이 들여쓰기 문자를 위해 여유 문자를 가질 수 있다.
 
 A good text editor can help here. It's easy to configure Vim, for example, to wrap text at 72 characters when you're writing a git commit. Traditionally, however, IDEs have been terrible at providing smart support for text wrapping in commit messages (although in recent versions, IntelliJ IDEA has [finally](http://youtrack.jetbrains.com/issue/IDEA-53615) [gotten](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [better](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) about this).
-좋은 텍스트 에디터는 이것을 도와줍니다.
-예를 들어, Vim에서는 설정하기 쉽습니다.
-전통적으로 Vim에서 Git 커밋 메시지를 작성하면 72자 단위로 개행시켜줍니다.
-하지만 IDE들은 커밋 메시지에서의 개행에 대한 지원이 끔찍합니다.
-(최근 버전의 IntelliJ IDEA는 [마침내](http://youtrack.jetbrains.com/issue/IDEA-53615) [좀](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [쓸만해졌지만](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912) 말이죠.)
+좋은 텍스트 에디터는 이 들여쓰기 작업을 도와준다.
+예를 들어, Vim에서는 Git 커밋에 맞춘 설정을 하기 쉽다.
+전통적으로 Vim에서 Git 커밋 메시지를 작성하면 72자 단위로 개행시켜준다.
+하지만 IDE들은 커밋 메시지에서의 개행에 대한 지원이 끔찍하다.
+(최근 버전의 IntelliJ IDEA는 [마침내](http://youtrack.jetbrains.com/issue/IDEA-53615) [좀](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-448299) [쓸만해졌지만](http://youtrack.jetbrains.com/issue/IDEA-53615#comment=27-446912).)
 
 
 <a name="why-not-how"></a>
 ### 7. Use the body to explain what and why vs. how
-### 7. 본문에 어떻게 바꿨는지 보단 무엇을 왜 바꿨는지 설명한다
+### 7. 어떻게 보다는 무엇과 왜를 설명한다
 
 This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) is a great example of explaining what changed and why:
-이 [Bitcoin Core의 커밋](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)은 무엇이 바뀌었고 왜 바꿨는지 설명하는 멋진 예시입니다.
+이 [Bitcoin Core의 커밋](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)은 무엇이 바뀌었고 왜 바꿨는지 설명하는 멋진 예시다.
 
     commit eb0b56b19017ab5c16c745e6da39c53126924ed6
     Author: Pieter Wuille <pieter.wuille@gmail.com>
@@ -590,60 +592,64 @@ This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56
        serialize.h의 예외 처리를 간략화한다
 
        serialize.h의 stream 구현과 관련된 메소드에서 'state'와 'exceptmask'를
-       삭제합니다.
+       삭제한다.
 
        exceptmask는 언제나 'failbit'을 포함하고, setstate는 언제나 bits = failbit
-       과 함께 호출되며 이 모든 것은 즉각적으로 예외를 발생시킵니다. 이 변수들을 삭제하고
-       setstate가 즉각적으로 예외를 발생시키게 바꿉니다. (물론 몇몇 죽은 코드도 지웁니다)
+       과 함께 호출되며 이 모든 것은 즉각적으로 예외를 발생시킨다. 이 변수들을 삭제하고
+       setstate가 즉각적으로 예외를 발생시키게 바꾼다. (물론 몇몇 죽은 코드도 지운다)
 
        그 결과 good()은 실패 후 절대 도달할 수 없고 (딱 두 군데서 호출 되는데 한 곳은
-       테스트 안임) 이것은 단순히 !eof()로 대체할 수 있습니다.
+       테스트 안임) 이것은 단순히 !eof()로 대체할 수 있다.
 
-       fail(), clear(n),exceptions()은 전혀 호출되지 않습니다. 삭제합니다.
+       fail(), clear(n),exceptions()은 전혀 호출되지 않는다. 해당 요소들은 삭제한다.
 
 Take a look at the [full diff](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) and just think how much time the author is saving fellow and future committers by taking the time to provide this context here and now.
 If he didn't, it would probably be lost forever.
-[전체 변경사항](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)을 보고 작성자가 이 내용을 제공하는 데에 시간을 씀으로써 동료, 그리고 앞으로의 커미터들의 시간을 얼마나 절약시켰을지 상상해보세요.
-만약 그가 이 메시지를 남기지 않았다면 이것은 영원히 묻혔을 것입니다.
+[전체 변경사항](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)을 보고 작성자가 이 내용을 제공하는 데에 시간을 씀으로써 동료, 그리고 앞으로의 커미터들의 시간을 얼마나 절약시켜줄지 상상해보라.
+만약 그가 이 메시지를 남기지 않았다면 이것은 영원히 묻혔을 것이다.
 
 In most cases, you can leave out details about how a change has been made. Code is generally self-explanatory in this regard (and if the code is so complex that it needs to be explained in prose, that's what source comments are for). Just focus on making clear the reasons why you made the change in the first place—the way things worked before the change (and what was wrong with that), the way they work now, and why you decided to solve it the way you did.
-대부분의 경우, 여러분은 만든 것이 어떻게 바뀌었는지를 남길 것입니다. 이 관점에서 보면 코드는 보통 따로 설명이 필요 없습니다. (그리고 만약 코드가 너무 복잡하다면 산문으로 설명되어야할 필요가 있지만 그런 것을 적기 위해 소스의 주석을 적을 수 있죠.) 여러분이 왜 이렇게 바꾸었는지에 먼저 주목하세요. 바꾸기 전에 무엇을 했는지 (그리고 무엇이 잘못 동작했는지), 지금은 어떻게 동작하는지, 그리고 왜 당신이 그렇게 바꾸기로 했는지 적으세요.
+대부분의 경우, 당신은 만든 것이 어떻게 바뀌었는지를 남길 것이다.
+이 관점에서 보면 코드는 보통 따로 설명이 필요 없다.
+(그리고 만약 코드가 너무 복잡하다면 산문으로 설명되어야할 필요가 있지만 그런 것은 코드의 주석에 적을 수 있다.)
+당신이 왜 이렇게 바꾸었는지에 먼저 주목하라.
+바꾸기 전에 무엇을 했는지 (그리고 무엇이 잘못 동작했는지), 지금은 어떻게 동작하는지, 그리고 왜 당신이 그렇게 바꾸기로 했는지 적어라.
 
 The future maintainer that thanks you may be yourself!
-미래의 메인테이너가 감사할겁니다. 물론 자기 자신도요!
+미래의 메인테이너가 감사할 것이다. 물론 자기 자신도!
 
 
 <a name="tips"></a>
 ## Tips
 
 ### Learn to love the command line. Leave the IDE behind.
-### 커맨드 라인을 애용하고 IDE를 멀리하세요.
+### 커맨드 라인을 애용하고 IDE를 멀리하라.
 
 For as many reasons as there are git subcommands, it's wise to embrace the command line. Git is insanely powerful; IDEs are too, but each in different ways. I use an IDE every day (IntelliJ IDEA) and have used others extensively (Eclipse), but I have never seen IDE integration for git that could begin to match the ease and power of the command line (once you know it).
-Git 서브커맨드가 여러가지 있는 만큼 커맨드 라인을 애용하는 것이 현명합니다.
-Git은 미친듯 강력합니다.
-IDE들 또한 마찬가지고요, 하지만 둘은 다른 길을 걷습니다.
-저는 IDE를 매일 씁니다.(IntelliJ IDEA)
-그리고 다른 것도 광범위하게 씁니다.(Eclipse)
-하지만 저는 IDE의 Git 지원 기능 중 커맨드라인만큼 쉽고 강력한 것을 보지 못했습니다.
-(여러분도 알고 있을겁니다.)
+Git 서브커맨드가 여러가지 있는 만큼 커맨드 라인을 애용하는 것이 현명하다.
+Git은 미친듯 강력하다.
+IDE들 또한 마찬가지지만 둘은 다른 길을 걷는다.
+나는 IDE를 매일 쓴다.(IntelliJ IDEA)
+그리고 다른 것도 광범위하게 쓴다.(Eclipse)
+하지만 나는 IDE의 Git 지원 기능 중 커맨드라인만큼 쉽고 강력한 것을 보지 못했다.
+(당신도 이미 이런 점을 알고 있을겁니다.)
 
 Certain git-related IDE functions are invaluable, like calling `git rm` when you delete a file, and doing the right stuff with `git` when you rename one. Where everything falls apart is when you start trying to commit, merge, rebase, or do sophisticated history analysis through the IDE.
-어떤 Git 연관의 IDE 기능들은 매우 가치있습니다. 파일을 지울 때 `git rm`을 해주거나 파일명을 바꿀 때 `git`으로 연계해주는 것들이요.
-모든 것이 멀리 떨어지는 부분은 커밋, 머지, 리베이스나 수준 높은 기록 분석을 IDE로 시도할 때 입니다.
+가령 파일을 지울 때 `git rm`을 해주거나 파일명을 바꿀 때 `git`으로 연계해주는 것 같은 몇몇 Git 연관의 IDE 기능들은 매우 가치있다.
+하지만 커밋, 머지, 리베이스나 수준 높은 기록 분석을 IDE로 시도하면 기능이 부족하다는 점을 알 게 될 것이다.
 
 When it comes to wielding the full power of git, it's command-line all the way.
-Git의 전력을 발휘하는 것은 바로 커맨드 라인을 쓸 때입니다.
+Git이 진가를 발휘하는 때는 바로 커맨드 라인을 사용할 때다.
 
 Remember that whether you use Bash or Z shell, there are [tab completion scripts](http://git-scm.com/book/en/Git-Basics-Tips-and-Tricks) that take much of the pain out of remembering the subcommands and switches.
-여러분이 Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 스위치 할때의 고통을 줄여주니 기억해두세요.
+Bash나 Z shell을 쓰고 있다면 tab키 완성 스크립트가 서브커맨드나 설정을 전환할 때의 고통을 줄여주니 기억하자.
 
 ### Read Pro Git
-### Pro Git 읽기
+### Pro Git 을 읽을 것
 
 The [Pro Git](http://git-scm.com/book) book is available online for free, and it's fantastic. Take advantage!
-Pro Git은 온라인 상에서 무료로 읽어볼 수 있고 내용도 환상적입니다.
-이용하세요!
+Pro Git은 온라인 상에서 무료로 읽어볼 수 있고 내용도 환상적이다.
+이용하라!
 
 
 
