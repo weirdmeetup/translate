@@ -113,13 +113,13 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 
 > _기억해두자. [이 내용은][1] [이미][2] [이전에][3] [다][4] [했던][5] [이야기다][6]._
 
- 1. [Separate subject from body with a blank line](#separate)
- 1. [Limit the subject line to 50 characters](#limit-50)
- 1. [Capitalize the subject line](#capitalize)
- 1. [Do not end the subject line with a period](#end)
- 1. [Use the imperative mood in the subject line](#imperative)
- 1. [Wrap the body at 72 characters](#wrap-72)
- 1. [Use the body to explain _what_ and _why_ vs. _how_](#why-not-how)
+ 1. [제목과 본문을 빈 행으로 분리한다](#separate)
+ 1. [제목 행을 50자로 제한한다](#limit-50)
+ 1. [제목 행 첫 글자는 대문자로 쓴다](#capitalize)
+ 1. [제목 행 끝에 마침표 넣지 않는다](#end)
+ 1. [제목 행에 명령문을 사용한다](#imperative)
+ 1. [본문을 72자 단위로 개행한다](#wrap-72)
+ 1. [어떻게 보다는 무엇과 왜를 설명한다](#why-not-how)
 
 For example:
 
