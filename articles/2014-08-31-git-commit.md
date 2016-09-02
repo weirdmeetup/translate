@@ -184,7 +184,7 @@ For example:
 <a name="separate"></a>
 ### 1. Separate subject from body with a blank line
 
-### 1. 제목과 본문을 빈 행으로 분리하기
+### 1. 제목과 본문을 빈 행으로 분리한다
 
 From the `git commit` [manpage](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html#_discussion):
 
@@ -310,7 +310,7 @@ There are a number of other contexts in git where the distinction between subjec
 <a name="limit-50"></a>
 ### 2. Limit the subject line to 50 characters
 
-### 2. 제목 행을 50자로 제한하기
+### 2. 제목 행을 50자로 제한한다
 
 50 characters is not a hard limit, just a rule of thumb. Keeping subject lines at this length ensures that they are readable, and forces the author to think for a moment about the most concise way to explain what's going on.
 
@@ -340,7 +340,7 @@ So shoot for 50 characters, but consider 69 the hard limit.
 <a name="capitalize"></a>
 ### 3. Capitalize the subject line
 
-### 3. 제목 행 첫 글자는 대문자로 쓰기
+### 3. 제목 행 첫 글자는 대문자로 쓴다
 
 This is as simple as it sounds. Begin all subject lines with a capital letter.
 
@@ -366,7 +366,7 @@ Instead of:
 <a name="end"></a>
 ### 4. Do not end the subject line with a period
 
-### 4. 제목 행 끝에 마침표 넣지 않기
+### 4. 제목 행 끝에 마침표 넣지 않는다
 
 Trailing punctuation is unnecessary in subject lines. Besides, space is precious when you're trying to keep them to [50 chars or less](#limit-50).
 
