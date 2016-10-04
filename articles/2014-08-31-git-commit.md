@@ -60,7 +60,7 @@ The contributors to these repositories know that a well-crafted git commit messa
 이 저장소 기여자들은 동료 개발자(뿐만 아니라 실제로 미래의 자기 자신)와 변경사항에 대한 _맥락_을 공유할 수 있는 최고의 수단은 잘 다듬어진 커밋 메시지라는 것을 잘 알고 있다. diff로 _어떤 것_이 변경되었는지 확인할 수 있지만, 오직 커밋 메시지를 통해서만 그 _이유_를 알 수 있을 것이다. Peter Hutter가 [이 점을 잘 설명해 놓았다](http://who-t.blogspot.co.at/2009/12/on-commit-messages.html).
 
 > Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to [reducing it](http://www.osnews.com/story/19266/WTFs_m) [as much] as possible. Commit messages can do exactly that and as a result, _a commit message shows whether a developer is a good collaborator_.
- 
+
 > 코드 조각의 앞뒤 맥락을 다시 살펴야 하는 것은 가치 없는 일이다. 이를 완벽하게 피할 수는 없기에, [코드 맥락을 다시 살피는 일을 줄이기 위해서](http://www.osnews.com/story/19266/WTFs_m) 최대한 노력해야 한다. 커밋 메시지는 정확히 그런 일을 할 수 있고, 이로 인해 *커밋 메시지 하나로 어떤 개발자가 좋은 협력자인지 아닌지 알 수 있다*.
 
 If you haven't given much thought to what makes a great git commit message, it may be the case that you haven't spent much time using `git log` and related tools. There is a vicious cycle here: because the commit history is unstructured and inconsistent, one doesn't spend much time using or taking care of it. And because it doesn't get used or taken care of, it remains unstructured and inconsistent.
@@ -69,7 +69,7 @@ If you haven't given much thought to what makes a great git commit message, it m
 
 But a well-cared for log is a beautiful and useful thing. `git blame`, `revert`, `rebase`, `log`, `shortlog` and other subcommands come to life. Reviewing others' commits and pull requests becomes something worth doing, and suddenly can be done independently. Understanding why something happened months or years ago becomes not only possible but efficient.
 
-하지만 잘 관리된 로그는 아름답고 유용하다. `git blame`이나 `revert`, `rebase`, `log`, `shortlog` 뿐만 아니라 다른 하위 명령어들도 활력을 얻게 된다. 다른 사람이한 커밋과 풀 리퀘스트를 리뷰하는 것이 가치있는 활동이 되고, 어느새 독립적으로 완료할 수 있게 된다. 몇 달 전이나 몇 년 전에 어떤 일이 일어난 이유에 대해 알 수 있음은 물론, 효과적으로 이해할 수 있게 된다.
+하지만 잘 관리된 로그는 아름답고 유용하다. `git blame`이나 `revert`, `rebase`, `log`, `shortlog` 뿐만 아니라 다른 하위 명령어들도 활력을 얻게 된다. 다른 사람이 작성한 커밋과 풀 리퀘스트를 리뷰하는 것은 가치있는 활동이 되고, 어느새 독립적으로 완료할 수 있게 된다. 몇 달 전이나 몇 년 전에 어떤 일이 일어난 이유에 대해 알 수 있음은 물론, 효과적으로 이해할 수 있게 된다.
 
 A project's long-term success rests (among other things) on its maintainability, and a maintainer has few tools more powerful than his project's log. It's worth taking the time to learn how to care for one properly. What may be a hassle at first soon becomes habit, and eventually a source of pride and productivity for all involved.
 
@@ -81,24 +81,24 @@ In this post, I am addressing just the most basic element of keeping a healthy c
 
 Most programming languages have well-established conventions as to what constitutes idiomatic style, i.e. naming, formatting and so on. There are variations on these conventions, of course, but most developers agree that picking one and sticking to it is far better than the chaos that ensues when everybody does their own thing.
 
-대부분 프로그램 언어들은 기여자에대한 관용적인 스타일(명명법, 포매팅 등등)에 대한 컨벤션(코딩 스타일 규약)이 잘 세워져 있다. 물론 컨벤션 종류가 다양하지만, 모두가 각자 스타일을 따라 개발해서 혼돈을 겪는 것보다는 한 가지 스타일 골라 그것만 사용하는 것이 훨씬 좋다는 것에 대부분 개발자들은 동의한다.
+대부분 프로그램 언어들은 기여자에 대한 명명법, 포매팅 등의 관용적인 스타일에 대해 규칙이 잘 세워져 있다. 물론 컨벤션 종류가 다양하지만, 모두가 각자 스타일을 따라 개발해서 혼돈을 겪는 것보다는 한 가지 스타일 골라 그것만 사용하는 것이 훨씬 좋다는 것에 대다수의 개발자들이 동의한다.
 
 A team's approach to its commit log should be no different. In order to create a useful revision history, teams should first agree on a commit message convention that defines at least the following three things:
 
-팀 차원 커밋 로그에 대한 접근법도 별반 다를 것이 없다. 유용한 정정 이력을 만들기 위해 팀은 먼저 적어도 다음 세 가지를 정의하는 커밋 메시지 컨벤션에 동의해야한다.
+팀 차원 커밋 로그에 대한 접근법도 별반 다를 것이 없다. 유용한 정정 이력을 만들기 위해, 우선 팀은 적어도 다음 세 가지를 정의하는 커밋 메시지 컨벤션에 동의해야한다.
 
 
 **Style.** Markup syntax, wrap margins, grammar, capitalization, punctuation. Spell these things out, remove the guesswork, and make it all as simple as possible. The end result will be a remarkably consistent log that's not only a pleasure to read but that actually _does get read_ on a regular basis.
 
-**스타일.** 마크업 문법, 여백 감싸기, 문법, 대문자 사용, 구두점. 이것들을 문서화 시켜 추측을 제거하고, 가능한 한 간단하게 만들어야 한다. 그 결과 눈에 띄게 일관성을 갖게 되어 읽기 즐겁고, 실제로 규칙적으로 _읽히는_ 로그가 될 것이다.
+**스타일**: 마크업 문법, 여백 감싸기, 문법, 대문자 사용, 구두점. 이것들을 문서화 시켜 추측을 제거하고, 가능한 한 간단하게 만들어야 한다. 그 결과 눈에 띄게 일관성을 갖게 되어 읽기 즐겁고, 실제로 규칙적으로 _읽히는_ 로그가 될 것이다.
 
 **Content.** What kind of information should the body of the commit message (if any) contain? What should it _not_ contain?
 
-**내용.** 커밋 메시지의 본문에는 어떤 종류에대한 내용이 들어가야 할까? 어떤 것은 들어가지 _않아야_ 할까?
+**내용**: 커밋 메시지의 본문에는 어떤 종류에 대한 내용이 들어가야 할까? 어떤 것은 들어가지 _않아야_ 할까?
 
 **Metadata.** How should issue tracking IDs, pull request numbers, etc. be referenced?
 
-**메타데이터(Metadata).** 이슈 트래킹 아이디, 풀 리퀘스트 번호 등등은 어떻게 참조할 수 있어야 하나?
+**메타데이터(Metadata)**: 이슈 트래킹 아이디, 풀 리퀘스트 번호 등등은 어떻게 참조할 수 있어야 하나?
 
 Fortunately, there are well-established conventions as to what makes an idiomatic git commit message. Indeed, many of them are assumed in the way certain git commands function. There's nothing you need to re-invent. Just follow the [seven rules](#seven-rules) below and you're on your way to committing like a pro.
 
@@ -107,7 +107,7 @@ Fortunately, there are well-established conventions as to what makes an idiomati
 <a name="seven-rules"></a>
 ## The seven rules of a great git commit message
 
-## 훌륭한 git 커밋 메시지에대한 7가지 규칙
+## 훌륭한 Git 커밋 메시지의 7가지 규칙
 
 > _Keep in mind: [This][1] [has][2] [all][3] [been][4] [said][5] [before][6]._
 
@@ -154,7 +154,7 @@ For example:
     이 내용을 여기에서 설명한다.
 
     Further paragraphs come after blank lines.
-    
+
     문단을 더 추가하고 싶다면 문단 사이에 빈 행을 넣는다.
 
      - Bullet points are okay, too
@@ -234,7 +234,7 @@ However, when a commit merits a bit of explanation and context, you need to writ
 
 This is not so easy to commit this with the `-m` switch. You really need a proper editor. If you do not already have an editor set up for use with git at the command line, read [this section of Pro Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
-이런 커밋은 `-m` 스위치를 사용해서 입력하기 어렵다. 이런 내용을 입력하기 위해서는 적합한 편집기를 사용해야 한다. 명령행 git에서 사용하는 편집기를 아직 설정하지 않았다면 [프로 Git 내용](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)을 읽어보도록 한다.
+이런 커밋은 `-m` 스위치를 사용해서 입력하기 어렵다. 이런 내용을 입력하기 위해서는 적합한 편집기를 사용해야 한다. 명령행 git에서 사용하는 편집기를 아직 설정하지 않았다면 [관련된 프로 Git 내용](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)을 읽어보도록 한다.
 
 In any case, the separation of subject from body pays off when browsing the log. Here's the full log entry:
 
@@ -301,7 +301,7 @@ Or, `git shortlog`, which groups commits by user, again showing just the subject
 
     Walter Gibbs (1):
           프로토타입 체스 프로그램 도입
-          
+
 There are a number of other contexts in git where the distinction between subject line and body kicks in—but none of them work properly without the blank line in between.
 
 여기서 예로 든 경우 외에도 git의 다양한 상황에서 제목 행과 본문을 구분해서 작성해야 한다. 어떤 상황에서든 제목 행과 본문 사이 빈 행이 존재해야 제대로 동작할 것이다.
@@ -322,7 +322,7 @@ There are a number of other contexts in git where the distinction between subjec
 
 GitHub's UI is fully aware of these conventions. It will warn you if you go past the 50 character limit:
 
-Github UI는 이런 관례를 잘 알고 있다. 만약 50자 이상을 입력하려고 한다면 경고 표시가 나타난다.
+GitHub UI는 이런 관례를 잘 알고 있다. 만약 50자 이상을 입력하려고 시도하면 경고 표시가 나타난다.
 
 ![gh1](http://i.imgur.com/zyBU2l6.png)
 
@@ -354,11 +354,11 @@ Instead of:
 
  - <font color="red">accelerate to 88 miles per hour</font>
 
-이렇게 작성하는 것 보다는:
+이렇게 작성하는 것 보다는,
 
  - <font color="red">accelerate to 88 miles per hour</font>
 
-다음처럼 작성하자:
+다음처럼 작성하자.
 
  - <font color="green">Accelerate to 88 miles per hour</font>
 
@@ -406,7 +406,7 @@ _Imperative mood_ just means "spoken or written as if giving a command or instru
  - 쓰레기를 갖다 버린다 (Take out the trash)
 
 같은 것을 말한다.
- 
+
 Each of the seven rules you're reading about right now are written in the imperative ("Wrap the body at 72 characters", etc.).
 
 당신이 지금 읽고 있는 이 글에서 각 일곱 규칙 또한 명령조다. ("본문을 72자 단위로 개행한다" 등등)
@@ -510,7 +510,7 @@ To remove any confusion, here's a simple rule to get it right every time.
 **이 문장에 기존 커밋 내용을 대입하였을 때 문장으로써 적절하면 그것은 적절한 Git 커밋 제목 행이다.**
 
  - If applied, this commit will _<u>your subject line here</u>_
- 
+
  - 만약 이 커밋이 적용되면 이 커밋은 _<u>커밋 제목 행을 여기에</u>_
 
 For example:
@@ -613,7 +613,7 @@ This [commit from Bitcoin Core](https://github.com/bitcoin/bitcoin/commit/eb0b56
 Take a look at the [full diff](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6) and just think how much time the author is saving fellow and future committers by taking the time to provide this context here and now.
 If he didn't, it would probably be lost forever.
 
-[전체 변경사항](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)을 보고 작성자가 이 내용을 제공하는 데에 시간을 씀으로써 동료, 그리고 앞으로 커미터 시간을 얼마나 절약시켜줄지 상상해보라.
+[전체 변경사항](https://github.com/bitcoin/bitcoin/commit/eb0b56b19017ab5c16c745e6da39c53126924ed6)을 보고 작성자가 이 내용을 제공하는 데에 시간을 씀으로써 동료, 그리고 앞으로 커미터들의 시간을 얼마나 절약시켜줄지 상상해보라.
 만약 그가 이 메시지를 남기지 않았다면 이것은 영원히 묻혔을 것이다.
 
 In most cases, you can leave out details about how a change has been made. Code is generally self-explanatory in this regard (and if the code is so complex that it needs to be explained in prose, that's what source comments are for). Just focus on making clear the reasons why you made the change in the first place—the way things worked before the change (and what was wrong with that), the way they work now, and why you decided to solve it the way you did.
@@ -634,7 +634,7 @@ The future maintainer that thanks you may be yourself!
 
 For as many reasons as there are git subcommands, it's wise to embrace the command line. Git is insanely powerful; IDEs are too, but each in different ways. I use an IDE every day (IntelliJ IDEA) and have used others extensively (Eclipse), but I have never seen IDE integration for git that could begin to match the ease and power of the command line (once you know it).
 
-Git 서브커맨드가 여러가지 있는 만큼 커맨드 라인을 애용하는 것이 현명하다. Git은 미친듯 강력하다. IDE들 또한 마찬가지지만 둘은 다른 길을 걷는다. 나는 IDE를 매일 쓴다.(IntelliJ IDEA) 그리고 다른 것도 광범위하게 쓴다.(Eclipse) 하지만 나는 IDE의 Git 지원 기능 중 커맨드라인만큼 쉽고 강력한 것을 보지 못했다. (당신도 이미 이런 점을 알고 있것이다.)
+Git 서브커맨드가 여러가지 있는 만큼 커맨드 라인을 애용하는 것이 현명하다. Git은 미친듯 강력하다. IDE들 또한 마찬가지지만 둘은 다른 길을 걷는다. 나는 IDE를 매일 쓴다.(IntelliJ IDEA) 그리고 다른 것도 광범위하게 쓴다.(Eclipse) 하지만 나는 IDE의 Git 지원 기능 중 커맨드라인만큼 쉽고 강력한 것을 보지 못했다. (당신도 이미 이런 점을 알고 있을것이다.)
 
 Certain git-related IDE functions are invaluable, like calling `git rm` when you delete a file, and doing the right stuff with `git` when you rename one. Where everything falls apart is when you start trying to commit, merge, rebase, or do sophisticated history analysis through the IDE.
 
@@ -664,4 +664,3 @@ Pro Git은 온라인 상에서 무료로 읽어볼 수 있고 내용도 환상�
 [4]: http://who-t.blogspot.co.at/2009/12/on-commit-messages.html
 [5]: https://github.com/erlang/otp/wiki/writing-good-commit-messages
 [6]: https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages
-
