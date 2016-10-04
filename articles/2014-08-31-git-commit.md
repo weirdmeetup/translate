@@ -457,6 +457,20 @@ Pro Git은 온라인상에서 무료로 읽어볼 수 있고 내용도 환상적
 이용하라!
 
 
+## 번역 참여자 명단
+
+본 포스팅의 번역에 다음과 같은 사람들이 참여했다.
+(알파벳 순으로 정렬되어있다)
+
+- [@chiyodad](https://github.com/chiyodad/)
+- [@haruair](https://github.com/haruair/)
+- [@item4](https://github.com/item4/)
+- [@majorika](https://github.com/majorika/)
+- [@minieetea](https://github.com/minieetea/)
+- [@riseshia](https://github.com/riseshia/)
+- [@ujuc](https://github.com/ujuc/)
+
+
 [1]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [2]: http://www.git-scm.com/book/en/Distributed-Git-Contributing-to-a-Project#Commit-Guidelines
 [3]: https://github.com/torvalds/subsurface/blob/master/README#L82-109
